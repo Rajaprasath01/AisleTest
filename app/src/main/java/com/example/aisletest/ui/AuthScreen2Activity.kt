@@ -28,10 +28,10 @@ class AuthScreen2Activity : AppCompatActivity() {
 
         val phone_number = intent.getStringExtra("phone_number").toString()
         binding.phoneNumber.text = phone_number
-        set_timer()
+        setTimer()
 
         binding.continueButton.setOnClickListener(View.OnClickListener {
-            validate_credentials(phone_number)
+            validateCredentials(phone_number)
         })
 
         binding.phoneNumber.setOnClickListener(View.OnClickListener {
@@ -46,29 +46,38 @@ class AuthScreen2Activity : AppCompatActivity() {
 
     }
 
-    private fun validate_credentials(phone_number: String) {
+    private fun validateCredentials(phone_number: String) {
 
         if (NetworkUtils.isNetworkAvailable(this)) {
             val otp = binding.otp.text.toString()
 
-            val credentials = Credentials(phone_number,otp)
+            if (!otp.isBlank()) {
+                val credentials = Credentials(phone_number, otp)
 
-            authScreen2ViewModel.loginWithOtp(credentials).observe(this, Observer {
-                val token =  it?.body()
-                if (it?.isSuccessful == true) {
+                binding.progressBar.visibility = View.VISIBLE
+                binding.continueButton.isClickable = false
+                authScreen2ViewModel.loginWithOtp(credentials).observe(this, Observer {
+                    val token = it?.body()
 
+                    binding.progressBar.visibility = View.GONE
+                    binding.continueButton.isClickable = true
 
-                    val intent = Intent(this,MainActivity::class.java)
+                    if (token?.token?.isBlank() == false) {
 
-                    intent.putExtra("token",token?.token.toString())
+                        val intent = Intent(this, MainActivity::class.java)
+                        intent.putExtra("token", token.token.toString())
+                        startActivity(intent)
+                        finish()
 
-
-                    startActivity(intent)
-                    finish()
-
-                }
-            })
-
+                    }
+                    else{
+                        Toast.makeText(this,"Invalid Credentials", Toast.LENGTH_LONG).show()
+                    }
+                })
+            }
+            else{
+                Toast.makeText(this,"Please enter the OTP", Toast.LENGTH_LONG).show()
+            }
         } else {
             Toast.makeText(this,"No Internet Connection", Toast.LENGTH_LONG).show()
 
@@ -77,7 +86,7 @@ class AuthScreen2Activity : AppCompatActivity() {
 
     }
 
-    private fun set_timer() {
+    private fun setTimer() {
         val totalMillis = 60000L // Total duration of the timer in milliseconds
         val intervalMillis = 1000L // Interval for timer updates in milliseconds
 
