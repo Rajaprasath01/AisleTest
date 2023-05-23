@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.NotesActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/notes"
+                android:layout_width="102dp"
+                android:layout_height="33dp"
+                android:gravity="center_horizontal|top"
+                android:text="@string/notes"
+                android:textColor="@color/black"
+                android:layout_marginTop="53dp"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:textSize="27sp"
+                />
+
+
+            <TextView
+                android:id="@+id/personal_me"
+                android:layout_width="215dp"
+                android:layout_height="25dp"
+                android:layout_below="@+id/notes"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:gravity="top"
+                android:text="@string/personal_messages_to_you"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/matchPic_layout"
+                android:layout_width="match_parent"
+                android:layout_height="344dp"
+                app:cardCornerRadius="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/personal_me"
+                android:layout_margin="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/match_pic"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/match_pic"
+                        />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_bottom"
+                        />
+
+                    <TextView
+
+                        android:id="@+id/match_name"
+                        android:layout_width="106dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_above="@+id/review_text"
+                        android:layout_marginBottom="2dp"
+                        android:text="Meena, 23"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+
+                        android:id="@+id/review_text"
+                        android:layout_width="192dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/review_text"
+                        android:textStyle="normal"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/upgrade_button_viewgroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/matchPic_layout">
+
+                <TextView
+                    android:id="@+id/interested_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="45dp"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/interested_in_you"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:gravity="top"
+                    />
+
+                <TextView
+                    android:id="@+id/premium_mem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="45dp"
+                    android:layout_below="@+id/interested_"
+                    android:layout_alignStart="@+id/upgrade_but"
+                    android:text="@string/premium_members_text"
+                    android:textSize="15sp"
+                    android:textColor="#9B9B9B"
+                    android:gravity="top"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/upgrade_but"
+                    android:layout_width="113dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/upgrade_button"
+                    android:text="@string/upgrade"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+
+                    />
+
+
+
+            </RelativeLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:layout_below="@+id/upgrade_button_viewgroup"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/likes_profile1"
+                    android:layout_width="0dp"
+                    android:layout_height="255dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintEnd_toStartOf="@+id/likes_profile2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:id="@+id/profile1pic"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/teena"
+
+                            />
+
+                        <TextView
+
+                            android:id="@+id/profile1name"
+                            android:layout_width="192dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Teena"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/likes_profile2"
+                    android:layout_width="0dp"
+                    android:layout_height="255dp"
+                    android:layout_alignParentEnd="true"
+
+                    android:layout_marginStart="8dp"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/likes_profile1"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:id="@+id/profile2pic"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/beena"
+
+                            />
+
+                        <TextView
+
+                            android:id="@+id/profile2name"
+                            android:layout_width="192dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Beena"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

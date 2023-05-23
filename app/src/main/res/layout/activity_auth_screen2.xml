@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AuthScreen2Activity">
+
+    <TextView
+        android:id="@+id/phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="56dp"
+        android:textSize="18sp"
+        android:text="+91 9999999999"
+        android:textColor="@color/black"
+        android:gravity="top"
+        android:drawablePadding="10dp"
+        android:padding="5dp"
+        app:drawableEndCompat="@drawable/edit_img" />
+
+    <TextView
+        android:id="@+id/enter_the_o"
+        android:layout_width="144dp"
+        android:layout_height="72dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="86dp"
+        android:text="@string/enter_the_otp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:gravity="top"
+        />
+
+    <EditText
+        android:id="@+id/rectangle_1"
+        android:layout_width="78dp"
+        android:layout_height="36dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="31dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/rectangle_1"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/rectangle_3"
+        android:layout_width="96dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="225dp"
+        android:background="@drawable/rectangle_3"
+        android:text="@string/continue_button_text"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="42dp"
+        android:layout_height="17dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="140dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="236dp"
+        android:text="@string/time"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center_horizontal|top"
+        />
+
+
+</RelativeLayout>

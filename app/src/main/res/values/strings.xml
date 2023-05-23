@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">AisleTest</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="Enter_phone_umber">Enter Your\nPhone Number</string>
+    <string name="continue_button_text">Continue</string>
+    <string name="enter_the_otp">Enter The OTP</string>
+    <string name="time">00:00</string>
+    <string name="notes">Notes</string>
+    <string name="personal_messages_to_you">Personal messages to you</string>
+    <string name="review_text">Tap to review 50+ notes</string>
+    <string name="interested_in_you">Interested In You</string>
+    <string name="premium_members_text">Premium members can\nview all their likes at once</string>
+    <string name="upgrade">Upgrade</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_discover">Discover</string>
+    <string name="title_notes">Notes</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_matches">Matches</string>
+</resources>
