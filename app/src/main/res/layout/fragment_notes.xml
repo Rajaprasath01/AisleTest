@@ -54,7 +54,8 @@
                 app:cardCornerRadius="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@id/personal_me"
-                android:layout_margin="20dp">
+                android:layout_margin="20dp"
+                >
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -63,12 +64,13 @@
                         android:id="@+id/match_pic"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/match_pic"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/match_pic"
                         />
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/gradient_bottom"
+                        android:src="@drawable/gradient_bottom"
                         />
 
                     <TextView
@@ -185,7 +187,8 @@
                             android:id="@+id/profile1pic"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/teena"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/teena"
 
                             />
 
@@ -229,7 +232,8 @@
                             android:id="@+id/profile2pic"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/beena"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/beena"
 
                             />
 

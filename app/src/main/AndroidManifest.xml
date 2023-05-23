@@ -18,17 +18,9 @@
             android:exported="true"
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.AisleTest.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".ui.NotesActivity"
-            android:exported="true" >
 
         </activity>
+
         <activity
             android:name=".ui.AuthScreen2Activity"
             android:exported="true" >
@@ -37,7 +29,11 @@
         <activity
             android:name=".ui.AuthScreen1Activity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

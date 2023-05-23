@@ -15,8 +15,11 @@ data class Profile(
     val meetup: Any,
     val online_code: Int,
     val photos: List<Photo>,
+    val preferences: List<Preference>,
+    val profile_data_list: List<ProfileData>,
     val show_concierge_badge: Boolean,
     val story: Any,
     val user_interests: List<Any>,
     val verification_status: String,
+    val work: Work
 )

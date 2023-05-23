@@ -1,7 +1,6 @@
 package com.example.aisletest.retrofit
 
 import com.example.aisletest.model.*
-import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.*
@@ -16,7 +15,7 @@ interface ApiInterface {
     suspend fun loginWithOtp(@Body credentials: Credentials): Response<Token>
 
     @GET("users/test_profile_list")
-     fun getProfileDetails(@Header("Authorization") token: String): Response<JSONObject>
+    suspend fun getProfileDetails(@Header("Authorization") token: String): Response<Profile_list>
 
 
 }

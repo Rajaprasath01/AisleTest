@@ -15,11 +15,11 @@ class AuthScreen2ViewModel : ViewModel() {
 
     private val repository = Repository()
 
-    fun loginWithOtp(credentials: Credentials): LiveData<Response<Token>> {
-        val tokenLiveData = MutableLiveData<Response<Token>>()
+    fun loginWithOtp(credentials: Credentials): LiveData<Response<Token>?> {
+        val tokenLiveData = MutableLiveData<Response<Token>?>()
         viewModelScope.launch {
-          var token = repository.loginWithOtp(credentials)
-            tokenLiveData.value = token!!
+          val token = repository.loginWithOtp(credentials)
+            tokenLiveData.value = token
         }
 
         return tokenLiveData

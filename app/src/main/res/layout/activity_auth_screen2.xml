@@ -39,19 +39,22 @@
         />
 
     <EditText
-        android:id="@+id/rectangle_1"
-        android:layout_width="78dp"
+        android:id="@+id/otp"
+        android:layout_width="wrap_content"
         android:layout_height="36dp"
         android:layout_alignParentStart="true"
         android:layout_marginStart="31dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="170dp"
+        android:inputType="number"
+        android:maxLength="4"
+        android:paddingStart="5dp"
         android:background="@drawable/rectangle_1"
         />
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/rectangle_3"
+        android:id="@+id/continue_button"
         android:layout_width="96dp"
         android:layout_height="40dp"
         android:layout_alignParentStart="true"
@@ -68,8 +71,8 @@
 
     <TextView
         android:id="@+id/timer"
-        android:layout_width="42dp"
-        android:layout_height="17dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_marginStart="140dp"
         android:layout_alignParentTop="true"

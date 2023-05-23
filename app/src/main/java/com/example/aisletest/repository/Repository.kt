@@ -4,7 +4,6 @@ import android.util.Log
 import com.example.aisletest.model.*
 import com.example.aisletest.retrofit.ApiInterface
 import com.example.aisletest.retrofit.RetrofitInstance
-import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.Body
@@ -35,7 +34,7 @@ class Repository {
     }
 
 
-     fun getProfileDetails(token: String): Response<JSONObject>?{
+    suspend fun getProfileDetails(token: String): Response<Profile_list>?{
         return try {
             apiInterface.getProfileDetails(token)       }
         catch (e: Exception) {
