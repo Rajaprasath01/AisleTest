@@ -37,7 +37,7 @@ class NotesFragment : Fragment() {
 
         val token  = "32c7794d2e6a1f7316ef35aa1eb34541"
 
-        notesViewModel.getProfileDetails(token).observe(requireActivity(), Observer {
+        notesViewModel.getProfileDetails(token).observe(requireActivity() , Observer {
 
 //            val profileList = it?.body()
 //            val invites= profileList?.invites
